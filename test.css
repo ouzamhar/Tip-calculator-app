@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+
+:root {
+  --Strong-cyan: hsl(172, 67%, 45%);
+  --Very-dark-cyan: hsl(183, 100%, 15%);
+  --Dark-grayish-cyan: hsl(186, 14%, 43%);
+  --Grayish-cyan: hsl(184, 14%, 56%);
+  --Light-grayish-cyan: hsl(185, 41%, 84%);
+  --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --White: hsl(0, 0%, 100%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "Space Mono", monospace;
+  font-weight: 800;
+  /* min-height: 100vh; */
+  background-color: var(--Light-grayish-cyan);
+  display: grid;
+  /* grid-template-rows: max-content 1fr; */
+  /* font-size: 1px; */
+}
+
+.logo {
+  display: block;
+  width: 80px;
+  margin: 3em;
+  justify-self: center;
+}
+
+.calculator {
+  background-color: var(--White);
+  padding: 2em;
+  border-radius: 20px;
+  width: 100%;
+  display: flex;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+}
+
+/* .input-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+} */
+
+label {
+  display: block;
+  color: var(--Dark-grayish-cyan);
+  margin-bottom: 1.7em;
+}
+
+.input-field {
+  position: relative;
+  margin-top: 0.4em;
+}
+
+.percntg-tip {
+  margin-top: 0.8em;
+}
+
+.input-field img {
+  position: absolute;
+  bottom: 30%;
+  padding-left: 1em;
+}
+
+input {
+  font-size: 24px;
+  width: 100%;
+  text-align: right;
+  background-color: var(--Very-light-grayish-cyan);
+  border: none;
+  padding: 0.3em 0.8em;
+  color: var(--Grayish-cyan);
+  font-family: inherit;
+  font-size: 24px;
+  border-radius: 5px;
+  background-color: black;
+}
+
+.percntg-tip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: stretch;
+  /* align-items: center; */
+}
+
+.percntg-choice {
+  width: calc(50% - 0.5em);
+
+  /* border: 1px black solid; */
+  /* font-size: 24px; */
+  border-radius: 5px;
+  font-size: 24px;
+  padding: 0.1em 0.5em;
+  /* padding: 0.2em; */
+  background-color: black;
+}
+
+input.percntg-choice {
+  text-align: center;
+  color: var(--Very-dark-cyan);
+  background-color: var(--Light-grayish-cyan);
+  /* font-size: inherit; */
+  /* height: 100%;  */
+  display: block;
+  text-align: right;
+}
+
+input:read-only {
+  text-align: center;
+  background-color: var(--Very-dark-cyan);
+  color: white;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+.output {
+  background-color: var(--Very-dark-cyan);
+  padding: 2em 1.5em 1.5em;
+  border-radius: 12px;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* margin-top: 1em; */
+}
+
+.result {
+  display: flex;
+  /* margin-top: 2em; */
+  justify-content: space-between;
+  color: var(--White);
+  /* font-size: smaller; */
+  margin-bottom: 1.5em;
+}
+
+.person {
+  color: var(--Grayish-cyan);
+  font-size: smaller;
+  letter-spacing: 0.5px;
+}
+
+.right {
+  font-size: 2em;
+  color: var(--Strong-cyan);
+  align-self: center;
+}
+
+.reset-btn {
+  background-color: var(--Strong-cyan);
+  border-radius: 4px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0.5em;
+  letter-spacing: 0.6px;
+  margin-top: 0.5em;
+  font-size: larger;
+}

@@ -251,6 +251,10 @@ input[type="number"] {
     padding: 6px 0;
     border-radius: 5px;
   }
+  .attribution {
+    align-self: center;
+    height: 50%;
+  }
 }
 
 .attribution {
@@ -258,4 +262,8 @@ input[type="number"] {
   font-size: smaller;
   color: var(--Very-dark-cyan);
   margin: 10px 0;
+}
+
+.attribution a {
+  text-decoration: none;
 }
